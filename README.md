@@ -6,7 +6,7 @@ to decide whether an unread email should be deleted or not (in fact sometimes yo
 Read [my blog post](http://gdelazzari.github.io/2017/06/04/emails-mess/) to know the story behind and to learn more details about the machine learning part.
 
 ## Running
-To run this program you will need to install all the required dependencies. You can easly do that with the following command:
+To run this program you will need to install all the required dependencies. You can easily do that with the following command:
 
 `sudo pip install -r requirements.txt`
 
@@ -19,7 +19,7 @@ Please note that this Python script will only run with Python 2 (because of that
 + Some parts are running very slow (like email deletion: spawning multiple threads could be a way to go)
 + It uses JSON files for >60MB databases (still I had no problems so far)
 + Not a lot of error checking
-+ Sometimes emails are not cached correctly locally and it ends up fetching them again for no reason, which slows things down even more (this is something that requires a bit of debugging)
++ Sometimes emails are not cached correctly and it ends up fetching them again for no reason, which slows things down even more (this will require a bit of debugging)
 + Saves your login details (password included) in plain text
 + Tested only on Linux
 + Only works with Gmail accounts
@@ -37,11 +37,13 @@ Please note that this Python script will only run with Python 2 (because of that
 + You can *absolutely* do a "safe" run before doing a real one, so you can preview how the classifier is taking its decisions
 
 ## Notes
-+ Remember to train and test the classifier before doing any real run
++ Remember to train and test the classifier before doing any safe/real run
 + Even if this is just an experiment, feedback is appreciated
 + Pull requests are welcome
 
 ## Disclaimer
 I take no responsibility if you lose important emails. This software is provided
 as it is, without any warranty. It's not a final product or an idiot-proof program
-__by no means__, it's more of an experiment/toy program I created for fun. Use at your own risk. Although it works just on unread emails (which, because of the fact they're actually unread, probably means you don't care a lot about them), it has the power to trash your personal emails based on its decisions. You have been warned.
+__by any means__: it's more of an experiment I created for fun. Use at your own risk.
+
+Although it works only on unread emails (which, because of the fact they're actually unread, probably means you don't care a lot about them), it has the ability to trash your personal emails based on its own decisions. You have been warned.
